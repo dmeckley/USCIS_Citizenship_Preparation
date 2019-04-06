@@ -21,13 +21,13 @@ def displayMenu():
     print("Enter 2 if you want to see only questions to input the answer.")
     print()
 
-def getMenuInput() -> int:
+def getMenuInput():
     return(int(input("Please enter your selection: ")))
 
-def generateRandomNumber() -> int:
+def generateRandomNumber():
     return(randint(1, 101))
 
-def getQuestion(number: int) -> str:
+def getQuestion(number: int):
     # Read in questions from a file or database, then update dictionary with key: value pair written in from the file.
     questions = {
         1: "What is the supreme law of the land?",
@@ -133,7 +133,7 @@ def getQuestion(number: int) -> str:
         }
     return(questions.get(number))
      
-def getAnswers(number: int) -> str:
+def getAnswers(number: int):
     answers = {
         1: "The Constitution",
         2: ["Sets up the government", 
@@ -421,17 +421,17 @@ def getAnswers(number: int) -> str:
     }
     return(answers.get(number))
 
-def getQuestionsAndAnswers(number: int):
+def getQuestionsAndAnswers(number):
     print(getQuestion(number))
     print(getAnswers(number))
 
-def getQuestionsOnly(number: int):
+def getQuestionsOnly(number):
     print(getQuestion(number))
 
-def getAnswer() -> str:
+def getAnswer():
     return(input("Enter your best guess: "))
 
-def checkAnswer(number: int, answer: str) -> bool:
+def checkAnswer(number, answer):
     if answer == getAnswers(number):
         return(True)
     else:
@@ -443,8 +443,8 @@ def main():
     displayMenu()
 
     # Local Variables to main():
-    menuInput: int = getMenuInput()
-    answer: str = ""
+    menuInput = getMenuInput()
+    answer = ""
     
     # 
     while menuInput != 0:
