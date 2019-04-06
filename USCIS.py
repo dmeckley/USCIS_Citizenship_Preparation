@@ -133,7 +133,7 @@ def getQuestion(number: int) -> str:
         }
     return(questions.get(number))
      
-def getAnswers(number: int) -> str:
+def getAnswers(number: int):
     answers = {
         1: "The Constitution",
         2: ["Sets up the government", 
